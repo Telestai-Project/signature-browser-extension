@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telestai Wallet RPC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h3>Connect to Telestai Core Wallet</h3>
+    <form id="walletForm">
+        <label for="rpcUser">RPC User:</label>
+        <input type="text" id="rpcUser" placeholder="RPC Username" required>
+        <label for="rpcPassword">RPC Password:</label>
+        <input type="password" id="rpcPassword" placeholder="RPC Password" required>
+        <label for="rpcPort">RPC Port:</label>
+        <input type="text" id="rpcPort" placeholder="RPC Port (e.g., 8332)" required>
+        <label for="walletAddress">Wallet Address:</label>
+        <input type="text" id="walletAddress" placeholder="Your Telestai wallet address" required>
+        <label for="message">Message to Sign:</label>
+        <input type="text" id="message" placeholder="Message to sign" required>
+        <button type="submit">Sign Message</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
